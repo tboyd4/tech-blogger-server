@@ -10,8 +10,7 @@ const authorSchema = new Schema(
     posts: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Post",
-        required: true,
+        ref: "Post"
       },
     ],
     email: {

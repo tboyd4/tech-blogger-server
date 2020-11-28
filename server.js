@@ -23,6 +23,10 @@ connection.once('open', () => {
 });
 
 // setting up routes
+const postRouter = require('./routes/posts');
+const authorRouter = require('./routes/authors');
+app.use('/posts', postRouter);
+app.use('/authors', authorRouter);
 
 // getting server running
 app.listen(port, () => {
