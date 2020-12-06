@@ -16,8 +16,8 @@ const postSchema = new Schema(
       required: true,
     },
     author: {
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Author' 
+        type: String,
+        required: true
     },
   },
   {
