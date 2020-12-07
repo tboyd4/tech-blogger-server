@@ -25,6 +25,8 @@ connection.once('open', () => {
 // setting up routes
 const postRouter = require('./routes/posts');
 const authorRouter = require('./routes/authors');
+const rootRouter = require('./routes/posts');
+app.use('/', rootRouter);
 app.use('/posts', postRouter);
 app.use('/authors', authorRouter);
 
