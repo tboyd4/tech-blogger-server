@@ -23,13 +23,13 @@ router.route('/add').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 })
 
-router.route(':id').get((req, res) => {
+router.route('/:id').get((req, res) => {
     Post.findById(req.params.id)
         .then(post => res.json(post))
         .catch(err => res.status(400).json('Error: ' + err));
 })
 
-router.route(':id').delete((req, res) => {
+router.route('/:id').delete((req, res) => {
     Post.findByIdAndDelete(req.params.id)
         .then(() => res.json('Post with ID ' + req.params.id + ' was deleted'))
         .catch(err => res.status(400).json('Error: ' + err));
